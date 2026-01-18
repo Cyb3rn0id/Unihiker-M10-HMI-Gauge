@@ -10,9 +10,9 @@ In Italy we have a problem with the electricity supply: every house has a power 
 
 Due this, the meter cuts off the power very often if you simultaneously turn on two appliances requiring high current values such as a washing machine + oven or an hairdryer + the dishwasher and so on.  This means you have to go out every time to reset the meter, which is really annoying.
 
-Lot of time ago I engineered a smart-home system in my house, I improved it over years and it runs entirely on [Node-Red](https://nodered.org/) , [Mosquitto ](https://mosquitto.org/) and [Tasmota]([Tasmota Documentation - Tasmota](https://tasmota.github.io/docs/)). I have all the high-current demand appliances connected through their own smart plugs: this allows me to turn them on/off and measure the current load for each device. 
+Lot of time ago I engineered a smart-home system in my house, I improved it over years and it runs entirely on [Node-Red](https://nodered.org/) , [Mosquitto ](https://mosquitto.org/) and [Tasmota](https://tasmota.github.io/docs/). I have all the high-current demand appliances connected through their own smart plugs: this allows me to turn them on/off and measure the current load for each device. 
 
-Recently I added a [Nous D3T current meter](https://amzn.to/4aXbdN5) at the top of the electrical system so I can make the system raise an alarm when the total power consuption is near the limit: in this case I can detach a device and I could do this also automatically through node-red, since I know which appliances are drawing power through the smart plugs. 
+Recently I added a (sponsored link) [Nous D3T current meter](https://amzn.to/4aXbdN5) at the top of the electrical system so I can make the system raise an alarm when the total power consuption is near the limit: in this case I can detach a device and I could do this also automatically through node-red, since I know which appliances are drawing power through the smart plugs. 
 
 Alarm is rised through a buzzer attached to the Raspberry Pi running Node-Red and also through a Telegram message using a bot. But... the Raspberry Pi is located in my laboratory and Telegram bot sometimes don't works properly and messages are sent lot of time after the alarm occurred.
 
