@@ -1,6 +1,6 @@
-Copy the file `hmi_launcher.py` in Unihiker device `/root`
+Copy the file `hmi_launcher.py` on the Unihiker `root/` folder
 
-Copy the entire *gauge_hmi* folder (the one you've already configured) in Unihiker device `/home`
+Copy the entire *gauge_hmi* folder (the one you've already configured) on Unihiker `home/` folder
 
 Turn on the Unihiker and check that *autoboot* is active: *home* - *service toggle* - *autoboot*
 
