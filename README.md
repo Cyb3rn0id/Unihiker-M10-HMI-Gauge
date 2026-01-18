@@ -26,13 +26,13 @@ I designed the enclosure using Onshape. I spent lot of time and effort for havin
 
 I shared all info about the enclosure, 3mf file for Bambulab 3D-Printers and STL files on my makerworld page. You can find it here: 
 
-[https://makerworld.com/it/models/2261736-unihiker-m10-enclosure-for-hmi-gauge]([Unihiker M10 enclosure for HMI Gauge](https://makerworld.com/it/models/2261736-unihiker-m10-enclosure-for-hmi-gauge))
+[Unihiker M10 enclosure for HMI Gauge](https://makerworld.com/it/models/2261736-unihiker-m10-enclosure-for-hmi-gauge)
 
 ### Code Setup
 
 Copy the entire *gauge_hmi* folder of the repo on your computer in order to prepare files. 
 
-Paste in the *gauge_hmi/assets* folder the font file `Anta-Regular.ttf` that you can download from [Google Fonts]([Anta - Google Fonts](https://fonts.google.com/specimen/Anta)).
+Paste in the *gauge_hmi/assets* folder the font file `Anta-Regular.ttf` that you can download from [Google Fonts](https://fonts.google.com/specimen/Anta).
 
 Paste in the *gauge_hmi/assets* folder a your own png splash image having a resolution of 240x320 pixels. The name of this file is contained in `config.py` and default is `splash_240x320.png`
 
