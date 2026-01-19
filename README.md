@@ -6,7 +6,7 @@
 
 In Italy we have a problem with the electricity supply: every house has a power meter that automatically cuts off the power if the total load in the home is greater than 3kW + 10% (3.3kW)
 
->  We have a voltage of 220÷240VAC, to this means your home appliances can draw a maximum of 15A in total. There are also contracts allowing 4.5 or 6kW and so on, but the 3kW one is the most diffused amog the italian domestic population. 
+>  We have a voltage of 220÷240VAC, so this means your home appliances can draw a maximum of 15A in total. There are also contracts allowing 4.5 or 6kW and so on, but the 3kW one is the most diffused amog the italian domestic population. 
 
 Due this, the meter cuts off the power very often if you simultaneously turn on two appliances requiring high current values such as a washing machine + oven or an hairdryer + the dishwasher and so on.  This means you have to go out every time to reset the meter, which is really annoying.
 
