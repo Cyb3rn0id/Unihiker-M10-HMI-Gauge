@@ -28,6 +28,8 @@ I shared all info about the enclosure, 3mf file for Bambulab 3D-Printers and STL
 
 [Unihiker M10 enclosure for HMI Gauge](https://makerworld.com/it/models/2261736-unihiker-m10-enclosure-for-hmi-gauge)
 
+[In this video](https://www.instagram.com/reel/DTvF3isiuHZ/) I show how the enclosure is intended to be assembled.
+
 ### Code Setup
 
 Copy the entire *gauge_hmi* folder of the repo on your computer in order to prepare files. 
