@@ -41,15 +41,16 @@ I shared all info about the enclosure, 3mf file for Bambulab 3D-Printers and STL
 
 5. Edit `config.py` by changing MQTT parameters and all other parameters for suit your own needs (keep always an original copy of config.py)
 6. Edit `mqtt_client.py` for using the right function for obtaining the value to display: more info in the *editing the mqtt client function* chapter below 
-7. Transfer the entire *gauge_hmi* folder on the unihiker *home/* folder.  I like to use WinSCP for transferring files. Default user/password on Unihiker are root/admin and local address, when connected to the PC, is 10.1.2.3
+7. Transfer the entire *gauge_hmi* folder on the unihiker *home/* folder.  I like to use WinSCP for transferring files. Default user/password on Unihiker are root / dfrobot and local address, when connected to the PC, is 10.1.2.3
 8. The file `hmi_launcher.py` contained in repo *root* has to be copied in *root/* folder on the unihiker.  
 9. Follow the instructions in [unihiker/root/README.md](unihiker/root/README.md) for achieving the autostart of the HMI gauge on Unihiker boot.  
 
 ### Editing the MQTT Client function
+
 There are 2 functions in `mqtt_client.py` having the same name: `_on_message`. One has to be commented and the other not. This function is automatically called for retrieving the value to be displayed when a message is received from the subscripted topic. Instructions are reported in the file itself starting from the row #53:   
-  
+
 The first defined function is used when the subscribed topic gives a payload containing only one value.  So, for example, I'll receive the value on a topic like `house_total_power` or `power\meter` and so on, and there is only ONE value: no JSON, no arrays. Only a numeric value from the topic.  
-  
+
 The second function has to be used when the payload is a JSON object and so the value is contained in a payload key or as element of a value defined as an array. This is the case of Power Meters running on Tasmota: those meters publish on a topic called `tele/[DEVICE]/SENSOR` giving a payload like the following:  
 
 ```json
@@ -69,9 +70,10 @@ The second function has to be used when the payload is a JSON object and so the 
     "Current": 1.956
   }
 }
-```  
+```
+
 Following the above example: I want to show the actual Power: this value is contained in the `ENERGY.Power` key. The function will have the following form:  
-  
+
 ```python
 payload = msg.payload.decode(errors="ignore").strip()
 data = json.loads(payload)
@@ -79,14 +81,15 @@ val = data["ENERGY"]["Power"]
 ```
 
 Another example is a value contained in an array element, for example a payload like this:
+
 ```json
 {
   "values": [432, 325, 766]
 }
 ```
-  
+
 I know that value I want to show is the second element of that array (325 in the above example), so the function will have the following form:
-  
+
 ```python
 payload = msg.payload.decode(errors="ignore").strip()
 data = json.loads(payload)
