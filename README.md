@@ -41,7 +41,7 @@ I shared all info about the enclosure, 3mf file for Bambulab 3D-Printers and STL
 
 5. Edit `config.py` by changing MQTT parameters and all other parameters for suit your own needs (keep always an original copy of config.py)
 6. Edit `mqtt_client.py` for using the right function for obtaining the value to display: more info in the *editing the mqtt client function* chapter below 
-7. Transfer the entire *gauge_hmi* folder on the unihiker *home/* folder.  I like to use WinSCP for transferring files. Default user/password on Unihiker are root / dfrobot and local address, when connected to the PC, is 10.1.2.3
+7. Transfer the entire *gauge_hmi* folder on the unihiker *home/* folder.  On Windows OS I like to use [WinSCP]([WinSCP :: Official Site :: Download](https://winscp.net/eng/download.php)) for transferring files. Default user/password on Unihiker are **root** / **dfrobot** and local address, when connected to the PC, is 10.1.2.3
 8. The file `hmi_launcher.py` contained in repo *root* has to be copied in *root/* folder on the unihiker.  
 9. Follow the instructions in [unihiker/root/README.md](unihiker/root/README.md) for achieving the autostart of the HMI gauge on Unihiker boot.  
 
